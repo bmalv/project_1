@@ -1,0 +1,365 @@
+Index: ../gradlew.bat
+===================================================================
+--- ../gradlew.bat	(revision a3ec873baa31f46d3fadc452f942f998ff966bfa)
++++ ../gradlew.bat	(revision a3ec873baa31f46d3fadc452f942f998ff966bfa)
+@@ -1,90 +0,0 @@
+-@if "%DEBUG%" == "" @echo off
+-@rem ##########################################################################
+-@rem
+-@rem  Gradle startup script for Windows
+-@rem
+-@rem ##########################################################################
+-
+-@rem Set local scope for the variables with windows NT shell
+-if "%OS%"=="Windows_NT" setlocal
+-
+-@rem Add default JVM options here. You can also use JAVA_OPTS and GRADLE_OPTS to pass JVM options to this script.
+-set DEFAULT_JVM_OPTS=
+-
+-set DIRNAME=%~dp0
+-if "%DIRNAME%" == "" set DIRNAME=.
+-set APP_BASE_NAME=%~n0
+-set APP_HOME=%DIRNAME%
+-
+-@rem Find java.exe
+-if defined JAVA_HOME goto findJavaFromJavaHome
+-
+-set JAVA_EXE=java.exe
+-%JAVA_EXE% -version >NUL 2>&1
+-if "%ERRORLEVEL%" == "0" goto init
+-
+-echo.
+-echo ERROR: JAVA_HOME is not set and no 'java' command could be found in your PATH.
+-echo.
+-echo Please set the JAVA_HOME variable in your environment to match the
+-echo location of your Java installation.
+-
+-goto fail
+-
+-:findJavaFromJavaHome
+-set JAVA_HOME=%JAVA_HOME:"=%
+-set JAVA_EXE=%JAVA_HOME%/bin/java.exe
+-
+-if exist "%JAVA_EXE%" goto init
+-
+-echo.
+-echo ERROR: JAVA_HOME is set to an invalid directory: %JAVA_HOME%
+-echo.
+-echo Please set the JAVA_HOME variable in your environment to match the
+-echo location of your Java installation.
+-
+-goto fail
+-
+-:init
+-@rem Get command-line arguments, handling Windowz variants
+-
+-if not "%OS%" == "Windows_NT" goto win9xME_args
+-if "%@eval[2+2]" == "4" goto 4NT_args
+-
+-:win9xME_args
+-@rem Slurp the command line arguments.
+-set CMD_LINE_ARGS=
+-set _SKIP=2
+-
+-:win9xME_args_slurp
+-if "x%~1" == "x" goto execute
+-
+-set CMD_LINE_ARGS=%*
+-goto execute
+-
+-:4NT_args
+-@rem Get arguments from the 4NT Shell from JP Software
+-set CMD_LINE_ARGS=%$
+-
+-:execute
+-@rem Setup the command line
+-
+-set CLASSPATH=%APP_HOME%\gradle\wrapper\gradle-wrapper.jar
+-
+-@rem Execute Gradle
+-"%JAVA_EXE%" %DEFAULT_JVM_OPTS% %JAVA_OPTS% %GRADLE_OPTS% "-Dorg.gradle.appname=%APP_BASE_NAME%" -classpath "%CLASSPATH%" org.gradle.wrapper.GradleWrapperMain %CMD_LINE_ARGS%
+-
+-:end
+-@rem End local scope for the variables with windows NT shell
+-if "%ERRORLEVEL%"=="0" goto mainEnd
+-
+-:fail
+-rem Set variable GRADLE_EXIT_CONSOLE if you need the _script_ return code instead of
+-rem the _cmd.exe /c_ return code!
+-if  not "" == "%GRADLE_EXIT_CONSOLE%" exit 1
+-exit /b 1
+-
+-:mainEnd
+-if "%OS%"=="Windows_NT" endlocal
+-
+-:omega
+Index: ../app/src/main/res/values/styles.xml
+===================================================================
+--- ../app/src/main/res/values/styles.xml	(revision a3ec873baa31f46d3fadc452f942f998ff966bfa)
++++ ../app/src/main/res/values/styles.xml	(revision a3ec873baa31f46d3fadc452f942f998ff966bfa)
+@@ -1,20 +0,0 @@
+-<resources>
+-
+-    <!--
+-        Base application theme, dependent on API level. This theme is replaced
+-        by AppBaseTheme from res/values-vXX/styles.xml on newer devices.
+-    -->
+-    <style name="AppBaseTheme" parent="android:Theme.Light">
+-        <!--
+-            Theme customizations available in newer API levels can go in
+-            res/values-vXX/styles.xml, while customizations related to
+-            backward-compatibility can go here.
+-        -->
+-    </style>
+-
+-    <!-- Application theme. -->
+-    <style name="AppTheme" parent="AppBaseTheme">
+-        <!-- All customizations that are NOT specific to a particular API-level can go here. -->
+-    </style>
+-
+-</resources>
+\ No newline at end of file
+Index: ../app/src/main/res/menu/activity_hello_world.xml
+===================================================================
+--- ../app/src/main/res/menu/activity_hello_world.xml	(revision a3ec873baa31f46d3fadc452f942f998ff966bfa)
++++ ../app/src/main/res/menu/activity_hello_world.xml	(revision a3ec873baa31f46d3fadc452f942f998ff966bfa)
+@@ -1,9 +0,0 @@
+-<menu xmlns:android="http://schemas.android.com/apk/res/android" >
+-
+-    <item
+-        android:id="@+id/menu_settings"
+-        android:orderInCategory="100"
+-        android:showAsAction="never"
+-        android:title="@string/menu_settings"/>
+-
+-</menu>
+\ No newline at end of file
+Index: ../app/src/main/res/layout/activity_hello_world.xml
+===================================================================
+--- ../app/src/main/res/layout/activity_hello_world.xml	(revision a3ec873baa31f46d3fadc452f942f998ff966bfa)
++++ ../app/src/main/res/layout/activity_hello_world.xml	(revision a3ec873baa31f46d3fadc452f942f998ff966bfa)
+@@ -1,15 +0,0 @@
+-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+-    xmlns:tools="http://schemas.android.com/tools"
+-    android:layout_width="match_parent"
+-    android:layout_height="match_parent"
+-    tools:context=".HelloWorldActivity" >
+-
+-    <TextView
+-        android:layout_width="wrap_content"
+-        android:layout_height="wrap_content"
+-        android:layout_centerHorizontal="true"
+-        android:layout_centerVertical="true"
+-        android:text="@string/hello_world"
+-        android:textSize="25sp" />
+-
+-</RelativeLayout>
+\ No newline at end of file
+Index: ../settings.gradle
+===================================================================
+--- ../settings.gradle	(revision a3ec873baa31f46d3fadc452f942f998ff966bfa)
++++ ../settings.gradle	(revision a3ec873baa31f46d3fadc452f942f998ff966bfa)
+@@ -1,1 +0,0 @@
+-include ':app'
+Index: ../proguard-project.txt
+===================================================================
+--- ../proguard-project.txt	(revision a3ec873baa31f46d3fadc452f942f998ff966bfa)
++++ ../proguard-project.txt	(revision a3ec873baa31f46d3fadc452f942f998ff966bfa)
+@@ -1,20 +0,0 @@
+-# To enable ProGuard in your project, edit project.properties
+-# to define the proguard.config property as described in that file.
+-#
+-# Add project specific ProGuard rules here.
+-# By default, the flags in this file are appended to flags specified
+-# in ${sdk.dir}/tools/proguard/proguard-android.txt
+-# You can edit the include path and order by changing the ProGuard
+-# include property in project.properties.
+-#
+-# For more details, see
+-#   http://developer.android.com/guide/developing/tools/proguard.html
+-
+-# Add any project specific keep options here:
+-
+-# If your project uses WebView with JS, uncomment the following
+-# and specify the fully qualified class name to the JavaScript interface
+-# class:
+-#-keepclassmembers class fqcn.of.javascript.interface.for.webview {
+-#   public *;
+-#}
+Index: ../app/src/main/res/values-v11/styles.xml
+===================================================================
+--- ../app/src/main/res/values-v11/styles.xml	(revision a3ec873baa31f46d3fadc452f942f998ff966bfa)
++++ ../app/src/main/res/values-v11/styles.xml	(revision a3ec873baa31f46d3fadc452f942f998ff966bfa)
+@@ -1,11 +0,0 @@
+-<resources>
+-
+-    <!--
+-        Base application theme for API 11+. This theme completely replaces
+-        AppBaseTheme from res/values/styles.xml on API 11+ devices.
+-    -->
+-    <style name="AppBaseTheme" parent="android:Theme.Holo.Light">
+-        <!-- API 11 theme customizations can go here. -->
+-    </style>
+-
+-</resources>
+\ No newline at end of file
+Index: ../app/src/main/AndroidManifest.xml
+===================================================================
+--- ../app/src/main/AndroidManifest.xml	(revision a3ec873baa31f46d3fadc452f942f998ff966bfa)
++++ ../app/src/main/AndroidManifest.xml	(revision a3ec873baa31f46d3fadc452f942f998ff966bfa)
+@@ -1,23 +0,0 @@
+-<?xml version="1.0" encoding="utf-8"?>
+-<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+-    package="codepath.demos.helloworlddemo"
+-    android:versionCode="1"
+-    android:versionName="1.0" >
+-
+-    <application
+-        android:allowBackup="true"
+-        android:icon="@drawable/ic_launcher"
+-        android:label="@string/app_name"
+-        android:theme="@style/AppTheme" >
+-        <activity
+-            android:name="codepath.demos.helloworlddemo.HelloWorldActivity"
+-            android:label="@string/app_name" >
+-            <intent-filter>
+-                <action android:name="android.intent.action.MAIN" />
+-
+-                <category android:name="android.intent.category.LAUNCHER" />
+-            </intent-filter>
+-        </activity>
+-    </application>
+-
+-</manifest>
+\ No newline at end of file
+Index: ../build.gradle
+===================================================================
+--- ../build.gradle	(revision a3ec873baa31f46d3fadc452f942f998ff966bfa)
++++ ../build.gradle	(revision a3ec873baa31f46d3fadc452f942f998ff966bfa)
+@@ -1,16 +0,0 @@
+-buildscript {
+-    repositories {
+-        jcenter()
+-        google()
+-    }
+-    dependencies {
+-        classpath 'com.android.tools.build:gradle:3.0.1'
+-    }
+-}
+-
+-allprojects {
+-    repositories {
+-        jcenter()
+-        google()
+-    }
+-}
+Index: ../app/src/main/res/values-v14/styles.xml
+===================================================================
+--- ../app/src/main/res/values-v14/styles.xml	(revision a3ec873baa31f46d3fadc452f942f998ff966bfa)
++++ ../app/src/main/res/values-v14/styles.xml	(revision a3ec873baa31f46d3fadc452f942f998ff966bfa)
+@@ -1,12 +0,0 @@
+-<resources>
+-
+-    <!--
+-        Base application theme for API 14+. This theme completely replaces
+-        AppBaseTheme from BOTH res/values/styles.xml and
+-        res/values-v11/styles.xml on API 14+ devices.
+-    -->
+-    <style name="AppBaseTheme" parent="android:Theme.Holo.Light.DarkActionBar">
+-        <!-- API 14 theme customizations can go here. -->
+-    </style>
+-
+-</resources>
+\ No newline at end of file
+Index: ../app/src/main/java/codepath/demos/helloworlddemo/HelloWorldActivity.java
+===================================================================
+--- ../app/src/main/java/codepath/demos/helloworlddemo/HelloWorldActivity.java	(revision a3ec873baa31f46d3fadc452f942f998ff966bfa)
++++ ../app/src/main/java/codepath/demos/helloworlddemo/HelloWorldActivity.java	(revision a3ec873baa31f46d3fadc452f942f998ff966bfa)
+@@ -1,22 +0,0 @@
+-package codepath.demos.helloworlddemo;
+-
+-import android.os.Bundle;
+-import android.app.Activity;
+-import android.view.Menu;
+-
+-public class HelloWorldActivity extends Activity {
+-
+-	@Override
+-	protected void onCreate(Bundle savedInstanceState) {
+-		super.onCreate(savedInstanceState);
+-		setContentView(R.layout.activity_hello_world);
+-	}
+-
+-	@Override
+-	public boolean onCreateOptionsMenu(Menu menu) {
+-		// Inflate the menu; this adds items to the action bar if it is present.
+-		getMenuInflater().inflate(R.menu.activity_hello_world, menu);
+-		return true;
+-	}
+-
+-}
+Index: ../app/build.gradle
+===================================================================
+--- ../app/build.gradle	(revision a3ec873baa31f46d3fadc452f942f998ff966bfa)
++++ ../app/build.gradle	(revision a3ec873baa31f46d3fadc452f942f998ff966bfa)
+@@ -1,16 +0,0 @@
+-apply plugin: 'com.android.application'
+-
+-dependencies {
+-    compile fileTree(dir: 'libs', include: '*.jar')
+-}
+-
+-android {
+-    compileSdkVersion 27
+-    buildToolsVersion "27.0.3"
+-
+-    defaultConfig {
+-        minSdkVersion 19
+-        targetSdkVersion 27
+-    }
+-
+-}
+Index: ../app/src/main/res/values/strings.xml
+===================================================================
+--- ../app/src/main/res/values/strings.xml	(revision a3ec873baa31f46d3fadc452f942f998ff966bfa)
++++ ../app/src/main/res/values/strings.xml	(revision a3ec873baa31f46d3fadc452f942f998ff966bfa)
+@@ -1,8 +0,0 @@
+-<?xml version="1.0" encoding="utf-8"?>
+-<resources>
+-
+-    <string name="app_name">HelloWorldDemo</string>
+-    <string name="hello_world">Hello world!</string>
+-    <string name="menu_settings">Settings</string>
+-
+-</resources>
+\ No newline at end of file
+Index: ../gradle/wrapper/gradle-wrapper.properties
+===================================================================
+--- ../gradle/wrapper/gradle-wrapper.properties	(revision a3ec873baa31f46d3fadc452f942f998ff966bfa)
++++ ../gradle/wrapper/gradle-wrapper.properties	(revision a3ec873baa31f46d3fadc452f942f998ff966bfa)
+@@ -1,6 +0,0 @@
+-#Tue May 09 20:47:20 CDT 2017
+-distributionBase=GRADLE_USER_HOME
+-distributionPath=wrapper/dists
+-zipStoreBase=GRADLE_USER_HOME
+-zipStorePath=wrapper/dists
+-distributionUrl=https\://services.gradle.org/distributions/gradle-4.1-all.zip
+Index: ../project.properties
+===================================================================
+--- ../project.properties	(revision a3ec873baa31f46d3fadc452f942f998ff966bfa)
++++ ../project.properties	(revision a3ec873baa31f46d3fadc452f942f998ff966bfa)
+@@ -1,14 +0,0 @@
+-# This file is automatically generated by Android Tools.
+-# Do not modify this file -- YOUR CHANGES WILL BE ERASED!
+-#
+-# This file must be checked in Version Control Systems.
+-#
+-# To customize properties used by the Ant build system edit
+-# "ant.properties", and override values to adapt the script to your
+-# project structure.
+-#
+-# To enable ProGuard to shrink and obfuscate your code, uncomment this (available properties: sdk.dir, user.home):
+-#proguard.config=${sdk.dir}/tools/proguard/proguard-android.txt:proguard-project.txt
+-
+-# Project target.
+-target=android-19

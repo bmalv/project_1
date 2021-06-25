@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@color/purple_200"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MovieDetailsActivity">
+
+    <TextView
+        android:id="@+id/tvAMDTitle"
+        android:layout_width="205dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginStart="42dp"
+        android:layout_marginTop="7dp"
+        android:layout_marginEnd="44dp"
+        android:layout_marginRight="44dp"
+        android:layout_toEndOf="@+id/ivAMDPoster"
+        android:background="#3F51B5"
+        android:fontFamily="sans-serif-smallcaps"
+        android:textAlignment="center"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        android:textColor="@color/white"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        tools:text="title here" />
+
+    <RatingBar
+        android:id="@+id/rbVoteAverage"
+        style="@style/Widget.AppCompat.RatingBar.Indicator"
+        android:layout_width="180dp"
+        android:layout_height="47dp"
+        android:layout_below="@+id/tvAMDTitle"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="28dp"
+        android:layout_marginLeft="228dp"
+        android:layout_marginTop="39dp"
+        android:layout_marginEnd="28dp"
+        android:layout_toEndOf="@+id/ivAMDPoster"
+        android:numStars="5"
+        android:stepSize="0.5" />
+
+    <TextView
+        android:id="@+id/tvAMDOverview"
+        android:layout_width="235dp"
+        android:layout_height="581dp"
+        android:layout_below="@+id/rbVoteAverage"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginStart="-2dp"
+        android:layout_marginLeft="177dp"
+        android:layout_marginTop="27dp"
+        android:layout_marginEnd="0dp"
+        android:layout_marginRight="0dp"
+        android:layout_toEndOf="@+id/ivAMDPoster"
+        android:background="#B73F51B5"
+        android:textAlignment="center"
+        android:textColor="#F5F5F6"
+        android:textSize="16sp"
+        tools:text="Hello long description here hehe ha ha what doe sthis do we will find out i am sleepy" />
+
+    <ImageView
+        android:id="@+id/ivAMDPoster"
+        android:layout_width="180dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="-1dp"
+        android:layout_marginTop="0dp"
+        android:scaleType="fitStart"
+        tools:srcCompat="@tools:sample/avatars" />
+
+    <TextView
+        android:id="@+id/tvReleaseDate"
+        android:layout_width="109dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="25dp"
+        android:layout_marginTop="340dp"
+        android:fontFamily="sans-serif-condensed-light"
+        android:textAlignment="center"
+        android:textColor="#540AD8"
+        android:textSize="20sp"
+        tools:text="date" />
+
+    <TextView
+        android:id="@+id/language"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="2dp"
+        android:layout_marginTop="443dp"
+        android:fontFamily="sans-serif-condensed-light"
+        android:text="Original Language: "
+        android:textAlignment="viewStart"
+        android:textColor="#560ADD"
+        android:textSize="16sp" />
+
+    <TextView
+        android:id="@+id/tvOGLang"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="120dp"
+        android:layout_marginBottom="139dp"
+        android:fontFamily="sans-serif-condensed-light"
+        android:textAlignment="center"
+        android:textColor="#570BDD"
+        android:textSize="16sp"
+        tools:text="boolean" />
+
+    <TextView
+        android:id="@+id/date"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="28dp"
+        android:layout_marginTop="296dp"
+        android:background="#AB00BCD4"
+        android:fontFamily="sans-serif-condensed-light"
+        android:text="Release Date:"
+        android:textColor="@color/white"
+        android:textSize="20sp" />
+</RelativeLayout>
