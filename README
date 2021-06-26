@@ -34,11 +34,16 @@ Here's a walkthrough of implemented user stories:
 
 ![](https://github.com/bmalv/project_1/raw/master/flickOne.gif)
 
+![](https://github.com/bmalv/project_1/raw/master/flixDemoTwo-min.gif)
+
 
 GIF created with [Kap](https://getkap.co/).
 
 ## Notes
 
+I had extreme trouble uploading gif's to github they were to big qand i even tried using a git compressor.
+Unfortunately 
+my gifs will not show up and i am unsure why.
 A challenge I had was generating API Keys and understanding which key was used for what.
 I also struggled with formatting my design but I managed to figure out how to adjust my icons
 and text boxes so they did not interfere with one another. 
